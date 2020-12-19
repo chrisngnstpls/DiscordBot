@@ -37,7 +37,6 @@ def help ():
 
     helpText = 'type !roll and a die number **(4, 6, 8, 10, 12, 20, 100).**The bot will roll once for each die you type in.***Correct format : !roll 4 12***'
     return helpText
-    #return 'type !roll and a die number ***(4, 6, 8, 10, 12, 20, 100).***\tThe bot will roll once for each die you type in.\tCorrect format : !roll 4 12'
 
 if __name__ == '__main__':
     
