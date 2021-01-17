@@ -16,8 +16,9 @@ TOKEN = os.environ.get('DISCORD_TOKEN')
 
 def getJoke():
     j = Jokes()
-    joke = j.get_joke(joke_type="twopart", blacklist=['sexist', 'racist'])
-    x = (joke["setup"])
+    joke = j.get_joke(joke_type="twopart", blacklist=['sexist', 'racist'], lang='en')
+    print(joke)
+    x = (joke['setup'])
     y = (joke["delivery"])
     yFinal = "***" + y + "***"
     return x, yFinal
@@ -86,10 +87,9 @@ if __name__ == '__main__':
         if message.content.startswith('!joke'):
             first, second = getJoke()
             await message.channel.send(first);
-            sleep(2)
+            await sleep(2)
             await message.channel.send(second)
 
 
     client.run(TOKEN)
-
 
